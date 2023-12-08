@@ -1,6 +1,6 @@
 import Step from "components/molecules/Step";
 import React, { Fragment, useEffect } from "react";
-import steps from 'components/molecules/StepsData';
+import steps from 'components/organisms/StepsData';
 
 function Home() {
 
