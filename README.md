@@ -1,4 +1,4 @@
-# Kamva Landing
+# AI Tree
 
 ### Prerequisites
 
@@ -12,9 +12,9 @@ Before you begin, make sure you have the following software installed:
 1. Clone the repository:
 
    ```bash
-   git clone git@github.com:Kamva-Academy/Kamva-Landing.git
+   git clone git@github.com:<organisation-name>/<repository-name>.git
 
-   cd KAMVA-LANDING
+   cd <repository-name>
 
    npm install
    ```
