@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Lalezar';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Lalezar.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "IRANYekan";
+    src: url("/fonts/IRANYekan.woff2")format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
