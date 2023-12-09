@@ -12,11 +12,15 @@ const theme = createTheme({
   typography: {
     allVariants: {
       fontFamily: "'Anjoman', 'IRANYekan', 'Lalezar'",
-      fontWeight: 400,
+      fontWeight: 800,
+      color: '#F5EFD9',
+      direction: 'rtl',
+      textAlign: 'justify',
     },
     button: {
       fontFamily: "'Anjoman', 'IRANYekan', 'Lalezar'",
-      fontWeight: 400,
+      fontWeight: 800,
+      direction: 'rtl',
     }
   },
   palette: {

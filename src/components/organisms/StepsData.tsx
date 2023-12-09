@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { Fragment } from "react";
 import { StepType } from "types/General";
 
@@ -7,9 +7,9 @@ const ArtificalInteligence: StepType = {
   x: 0,
   y: 0,
   scale: 2,
-  children: <h1>هوش مصنوعی</h1>,
+  children: <Typography variant="h1">{'هوش مصنوعی'}</Typography>,
   links: [
-    { x: 900, y: 450, rotate: 2, length: 110 }
+    { x: 940, y: 450, rotate: 2, length: 110 }
   ]
 };
 
@@ -23,7 +23,7 @@ const ComputerVision: StepType = {
       <Button>
         salam
       </Button>
-      <h1>هوش مصنوععععی</h1>
+      <Typography variant="h1">{'پردازش زبان'}</Typography>
     </Fragment>,
   links: [
     { x: 650, y: 520, rotate: 90, length: 400 }
