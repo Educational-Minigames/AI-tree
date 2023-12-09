@@ -1,14 +1,8 @@
+import Link from "components/atoms/Link";
 import { FC } from "react";
-import { StepIdType } from "types/General";
+import { StepType } from "types/General";
 
-type StepComponentPropsType = {
-  id: StepIdType;
-  previousStep?: StepIdType;
-  nextStep?: StepIdType;
-  children: any;
-  x: number;
-  y: number;
-  scale: number;
+type StepComponentPropsType = StepType & {
 }
 
 const Step: FC<StepComponentPropsType> = ({
@@ -19,9 +13,13 @@ const Step: FC<StepComponentPropsType> = ({
   y,
   scale,
   children,
+  links,
 }) => {
   return (
     <div className="step center" id={id} data-scale={scale} data-x={x} data-y={y} next-step={nextStep} prev-step={previousStep}>
+      {links?.map((link, index) =>
+        <Link key={index} {...link} />
+      )}
       {children}
     </div>
   )

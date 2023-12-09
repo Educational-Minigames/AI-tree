@@ -1,6 +1,7 @@
 import Step from "components/molecules/Step";
 import React, { Fragment, useEffect } from "react";
 import steps from 'components/organisms/StepsData';
+import { Box } from "@mui/material";
 
 function Home() {
 
@@ -15,7 +16,7 @@ function Home() {
     <Fragment>
       <div id="impress" data-transition-duration="1000">
         {steps.map(step =>
-          <Step {...step} />
+          <Step key={step.id} {...step} />
         )}
       </div>
       <script type="text/javascript" src="/js/impress.js" />
