@@ -160,7 +160,7 @@ body.impress-mouse-timeout {
 */
 
 .impress-enabled {
-    pointer-events: none
+    /* pointer-events: none */
 }
 
 .impress-enabled #impress {

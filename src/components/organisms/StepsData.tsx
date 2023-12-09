@@ -4,6 +4,7 @@ import { StepType } from "types/General";
 import MLImage from 'assets/ml-image.png';
 import CVImage from 'assets/computer-vision-image.png';
 import Image from "next/image";
+import PlayGameButton from "components/molecules/PlayGameButton";
 
 const ArtificalInteligence: StepType = {
   id: "ArtificalInteligence",
@@ -67,6 +68,7 @@ const ComputerVision: StepType = {
             width={0} height={0} src={CVImage} alt=""
             style={{ width: '100%', height: 'auto' }} />
         </Box>
+        <PlayGameButton gameLink={'https://neural-network-playground.darkube.app/#activation=sigmoid&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.15&regularizationRate=0&noise=0&networkShape=3,1&seed=0.95066&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false&showTestData_hide=true&activation_hide=true&noise_hide=true&resetButton_hide=false&regularization_hide=true&dataset_hide=false&playButton_hide=false&learningRate_hide=true&regularizationRate_hide=true&percTrainData_hide=true&discretize_hide=true&batchSize_hide=true&stepButton_hide=false&problem_hide=true'} />
       </Stack>
 
     </Stack>,
