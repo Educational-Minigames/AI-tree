@@ -1,3 +1,7 @@
+body {
+    background-color: #1d6abd !important;
+}
+
 * {
     font-family: Anjoman, IRANYekan, Lalezar;
     margin: 0;
@@ -17,4 +21,12 @@ body {
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
+}
+
+.center {
+    text-align: center;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
