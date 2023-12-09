@@ -12,15 +12,18 @@ const ArtificalInteligence: StepType = {
   y: 0,
   scale: 4,
   children:
-    <Stack alignItems={'end'} justifyContent={'center'} width={'100%'} height={'100%'}>
+    <Stack alignItems={'center'} justifyContent={'center'} width={'100%'} height={'100%'}>
       <Typography variant="h1" gutterBottom>{'هوش مصنوعی'}</Typography>
-      <Typography variant="h5" gutterBottom>{'Artificial Inteligence'}</Typography>
-      <Typography width={600}>
-        هوش مصنوعی از اواسط قرن بیستم مورد توجه جدی دانشمندان و سرمایه‌گذاران قرار گرفت؛ اما نتایجِ به دست آمده از تحقیقات و پژوهش‌های کلان، با پیش‌بینی‌های خوش‌بینانه و انتظارات فزاینده‌ی آنان فاصله‌ی زیادی داشت. این شکست، سرانجام پس از مدت کوتاهی و در اواخر قرن بیستم منجر به فروپاشی صنایع وابسته و قطع بودجه‌های پژوهشی در این حوزه شد. این شرایط که حدود سه دهه ادامه داشت بعدها به زمستان هوش مصنوعی مشهور شد. آنچه در درخت هوش مصنوعی می‌بینید مروری بر ابداعات و ابتکاراتی ا‌ست که در قرن بیست و یکم، هوش مصنوعی را از  زمستان خود به بهاری  پربار  رسانده است.
-      </Typography>
+      <Stack alignItems={'end'}>
+        <Typography variant="h5" justifyItems={'start'} gutterBottom>{'Artificial Inteligence'}</Typography>
+        <Typography width={600} paddingLeft={18}>
+          هوش مصنوعی از اواسط قرن بیستم مورد توجه جدی دانشمندان و سرمایه‌گذاران قرار گرفت؛ اما نتایجِ به دست آمده از تحقیقات و پژوهش‌های کلان، با پیش‌بینی‌های خوش‌بینانه و انتظارات فزاینده‌ی آنان فاصله‌ی زیادی داشت. این شکست، سرانجام پس از مدت کوتاهی و در اواخر قرن بیستم منجر به فروپاشی صنایع وابسته و قطع بودجه‌های پژوهشی در این حوزه شد. این شرایط که حدود سه دهه ادامه داشت بعدها به زمستان هوش مصنوعی مشهور شد. آنچه در درخت هوش مصنوعی می‌بینید مروری بر ابداعات و ابتکاراتی ا‌ست که در قرن بیست و یکم، هوش مصنوعی را از  زمستان خود به بهاری  پربار  رسانده است.
+        </Typography>
+      </Stack>
     </Stack>,
   links: [
-    { x: 1100, y: 330, rotate: 0, length: 440 }
+    { x: 960, y: 330, rotate: 0, length: 540 },
+    { x: 200, y: 290, rotate: -140, length: 400 },
   ]
 };
 
@@ -52,7 +55,7 @@ const MachineLearning: StepType = {
 
 const ComputerVision: StepType = {
   id: "ComputerVision",
-  x: -2800,
+  x: -3600,
   y: -2400,
   scale: 3,
   children:
@@ -62,7 +65,7 @@ const ComputerVision: StepType = {
       <Typography width={600}>
         یک تصویر دیجیتال از دید کامپیوتر، صرفا شامل مقادیر عددی رنگ پیکسل‌ها است. بینایی ماشین شاخه‌ای است که به کامپیوتر اجازه می‌دهد درک عمیق‌تری از این اعداد پیدا کند و اطلاعاتی مانند اشیای درونِ تصویر را استخراج کند؛ برای مثال در دیجی‌کالا، کاربران به زودی خواهند توانست با ارسال یک تصویر، کالاهای مشابه آن را از میان هزاران کالا پیدا کنند. شبکه‌های عصبی عمیق در پیشرفت این حوزه نقش به‌سزایی داشته‌اند. با این حال به علت نیاز به داده‌های زیاد در این شاخه، فراهم کردن میلیون‌ها تصویر با برچسب مناسب، همواره یک چالش بزرگ بوده است.
       </Typography>
-      <Stack width={'100%'} direction={'row'} justifyContent={'space-evenly'}>
+      <Stack width={'100%'} direction={'row'} alignItems={'center'} justifyContent={'space-evenly'}>
         <Box mt={4} width={500} alignSelf={'start'}>
           <Image
             width={0} height={0} src={CVImage} alt=""
