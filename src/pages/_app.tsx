@@ -44,7 +44,6 @@ function App({ Component, pageProps }: AppProps) {
         <title>درخت هوش مصنوعی</title>
         <meta name="description" content="درخت هوش مصنوعی" />
         <meta name="author" content="موزه علوم کامپیوتر ایران" />
-        <link href="https://db.onlinewebfonts.com/c/f6886c4078ba029be14b7d1053f961b5?family=Anjoman" rel="stylesheet" />
       </Head>
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
