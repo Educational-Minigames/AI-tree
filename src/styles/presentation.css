@@ -47,18 +47,18 @@ body {
 */
 
 .step {
-    position: relative;
-    display: block;
+    /* position: relative; */
+    /* display: block; */
 
-    margin: 20px auto;
+    /* margin: 20px auto; */
     padding: 40px 60px;
 
-    width: 1200px;
+    width: 1000px;
     height: 800px;
 
-    font-family: Anjoman;
-    font-size: 40px;
-    letter-spacing: -1px;
+    /* font-family: Anjoman; */
+    /* font-size: 40px; */
+    /* letter-spacing: -1px; */
 }
 
 /*

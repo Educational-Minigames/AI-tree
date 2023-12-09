@@ -13,9 +13,9 @@ const Link: FC<LinkPropsType> = ({
       position: 'fixed',
       top: y, left: x,
       transform: `rotate(${rotate}deg)`,
-      transformOrigin: '0px 3px',
-      width: length, height: 6,
-      background: 'repeating-linear-gradient(90deg, #DE6B44 0 8px, transparent 0 14px)'
+      transformOrigin: '0px 6px',
+      width: length, height: 12,
+      background: 'repeating-linear-gradient(90deg, #DE6B44 0 16px, transparent 0 26px)'
     }} />
   )
 }

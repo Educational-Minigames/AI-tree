@@ -1,3 +1,4 @@
+import { Stack } from "@mui/material";
 import Link from "components/atoms/Link";
 import { FC } from "react";
 import { StepType } from "types/General";
@@ -16,7 +17,7 @@ const Step: FC<StepComponentPropsType> = ({
   links,
 }) => {
   return (
-    <div className="step center" id={id} data-scale={scale} data-x={x} data-y={y} next-step={nextStep} prev-step={previousStep}>
+    <div className="step" id={id} data-scale={scale} data-x={x} data-y={y} next-step={nextStep} prev-step={previousStep}>
       {links?.map((link, index) =>
         <Link key={index} {...link} />
       )}

@@ -9,6 +9,7 @@ export default function Document() {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <link href="https://db.onlinewebfonts.com/c/f6886c4078ba029be14b7d1053f961b5?family=Anjoman" rel="stylesheet" />
+        <link href="https://db.onlinewebfonts.com/c/5fc6f4fd75e944a52a342ab2c7f100f1?family=Montserrat" rel="stylesheet" />
       </Head>
       <body>
         <Main />

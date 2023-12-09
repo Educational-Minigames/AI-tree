@@ -4,43 +4,12 @@ import 'styles/impress-common.css';
 import 'styles/presentation.css';
 
 import type { AppProps } from 'next/app'
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import Head from 'next/head';
 import { Fragment } from 'react';
-
-const theme = createTheme({
-  typography: {
-    allVariants: {
-      fontFamily: "'Anjoman', 'IRANYekan', 'Lalezar'",
-      fontWeight: 800,
-      color: '#F5EFD9',
-      direction: 'rtl',
-      textAlign: 'justify',
-    },
-    button: {
-      fontFamily: "'Anjoman', 'IRANYekan', 'Lalezar'",
-      fontWeight: 800,
-      direction: 'rtl',
-    }
-  },
-  palette: {
-    primary: {
-      light: '#3498DB',
-      main: '#3C8CE7',
-      dark: '#00376F',
-      contrastText: '#000',
-    },
-    secondary: {
-      light: '#FFE08B',
-      main: '#FFD358',
-      dark: '#ffbb00',
-      contrastText: '#fff',
-    },
-  },
-});
+import ThemeRTL from 'configs/themes/ThemeRTL';
 
 function App({ Component, pageProps }: AppProps) {
-
   return (
     <Fragment>
       <Head>
@@ -49,7 +18,7 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="description" content="درخت هوش مصنوعی" />
         <meta name="author" content="موزه علوم کامپیوتر ایران" />
       </Head>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={ThemeRTL}>
         <Component {...pageProps} />
       </ThemeProvider>
     </Fragment>
