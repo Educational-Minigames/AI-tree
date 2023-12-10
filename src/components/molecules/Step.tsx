@@ -1,12 +1,11 @@
-import { Stack } from "@mui/material";
 import Link from "components/atoms/Link";
 import { FC } from "react";
-import { StepType } from "types/General";
+import { LinkType, StepType } from "types/General";
 
 type StepComponentPropsType = StepType & {
 }
 
-const Step: FC<StepComponentPropsType> = ({
+const StepComponent: FC<StepComponentPropsType> = ({
   id,
   nextStep,
   previousStep,
@@ -26,4 +25,4 @@ const Step: FC<StepComponentPropsType> = ({
   )
 }
 
-export default Step;
+export default StepComponent;

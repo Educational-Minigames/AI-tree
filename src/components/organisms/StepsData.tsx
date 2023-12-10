@@ -1,12 +1,11 @@
-import { Box, Button, Stack, Typography } from "@mui/material";
-import { Fragment } from "react";
-import { StepType } from "types/General";
+import { Box, Stack, Typography } from "@mui/material";
 import MLImage from 'assets/ml-image.png';
 import CVImage from 'assets/computer-vision-image.png';
 import Image from "next/image";
 import PlayGameButton from "components/molecules/PlayGameButton";
+import { Step } from "components/classes/Step";
 
-const ArtificalInteligence: StepType = {
+const ArtificalInteligence = new Step({
   id: "ArtificalInteligence",
   x: 0,
   y: 0,
@@ -25,13 +24,15 @@ const ArtificalInteligence: StepType = {
     { x: 960, y: 330, rotate: 0, length: 540 },
     { x: 200, y: 290, rotate: -140, length: 400 },
   ]
-};
+})
 
-const MachineLearning: StepType = {
+
+const MachineLearning = new Step({
+  parent: ArtificalInteligence,
   id: "MachineLearning",
   x: 4800,
   y: 0,
-  scale: 3,
+  scale: 0.66,
   children:
     <Stack alignItems={'end'} justifyContent={'center'} width={'100%'} height={'100%'}>
       <Typography variant="h2" gutterBottom>{'یادگیری ماشین'}</Typography>
@@ -51,13 +52,14 @@ const MachineLearning: StepType = {
   links: [
     // { x: 650, y: 520, rotate: 90, length: 400 }
   ]
-};
+});
 
-const ComputerVision: StepType = {
+const ComputerVision = new Step({
+  parent: ArtificalInteligence,
   id: "ComputerVision",
   x: -3600,
   y: -2400,
-  scale: 3,
+  scale: 0.66,
   children:
     <Stack alignItems={'center'} justifyContent={'center'} width={'100%'} height={'100%'}>
       <Typography variant="h2" gutterBottom>{'بینایی ماشین'}</Typography>
@@ -78,7 +80,7 @@ const ComputerVision: StepType = {
   links: [
     // { x: 650, y: 520, rotate: 90, length: 400 }
   ]
-};
+});
 
 
 export default [
