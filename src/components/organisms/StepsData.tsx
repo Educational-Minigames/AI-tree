@@ -187,8 +187,8 @@ export default [
   ArtificalInteligence,
   MachineLearning,
   ComputerVision,
-  NaturalLanguageProcessing,
   ObjectDetection,
+  NaturalLanguageProcessing,
   MachineTranslation,
   SentimentAnalysis,
 ];
