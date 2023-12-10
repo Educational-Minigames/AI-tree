@@ -16,7 +16,7 @@ const StepComponent: FC<StepComponentPropsType> = ({
   links,
 }) => {
   return (
-    <div className="step" id={id} data-scale={scale} data-x={x} data-y={y} data-goto-next-list={`${previousStep} ${nextStep}`} data-goto-key-list="ArrowLeft ArrowRight">
+    <div className="step" id={id} data-scale={scale} data-x={x} data-y={y} data-goto-next-list={`${previousStep} ${previousStep} ${nextStep} ${nextStep}`} data-goto-key-list="ArrowLeft ArrowUp ArrowRight ArrowDown">
       {links?.map((link, index) =>
         <Link key={index} {...link} />
       )}
