@@ -5,6 +5,7 @@ import PlayGameButton from "components/molecules/PlayGameButton";
 import MLImage from 'assets/ml-image.png';
 import CVImage from 'assets/computer-vision-image.png';
 import NLPImage from 'assets/natural-lanquage-processing-image.png';
+import ODImage from 'assets/object-detection-image.png';
 
 const ArtificalInteligence = new Step({
   id: "ArtificalInteligence",
@@ -78,7 +79,7 @@ const ComputerVision = new Step({
       </Stack>
     </Stack>,
   links: [
-    // { x: 650, y: 520, rotate: 90, length: 400 }
+    { x: 360, y: 190, rotate: -160, length: 680 },
   ]
 });
 
@@ -106,9 +107,32 @@ const NaturalLanguageProcessing = new Step({
   ]
 });
 
+const ObjectDetection = new Step({
+  parent: ComputerVision,
+  id: "ObjectDetection",
+  x: -3200,
+  y: -740,
+  scale: 0.66,
+  children:
+    <Stack alignItems={'end'} justifyContent={'center'} width={'100%'} height={'100%'}>
+      <Typography variant="h2" gutterBottom>{'تشخیص اشیا'}</Typography>
+      <Typography variant="h5" gutterBottom>{'Object Detection'}</Typography>
+      <Typography width={500}>
+        تشخیص اشیا یکی از مسائل حوزه‌ی بینایی ماشین است که هدف‌ آن تشخیص و مکان‌یابی اشیای موردنظر در تصویر یا ویدیو است. مرحله‌ی اولیه‌ی این مسئله، شناسایی موقعیت و مرزهای هر یک از اشیا و سپس طبقه‌بندی آن‌ها در دسته‌های مختلف است. اکثر مدل‌های موفقِ تشخیص اشیا از شبکه‌های عصبی به خصوص شبکه‌ی عصبی پیچشی استفاده می‌کنند.
+      </Typography>
+      <Box width={600} alignSelf={'start'}>
+        <Image width={0} height={0} src={ODImage} alt="" style={{ width: '100%', height: 'auto' }} />
+      </Box>
+    </Stack>,
+  links: [
+    // { x: 650, y: 520, rotate: 90, length: 400 }
+  ]
+});
+
 export default [
   ArtificalInteligence,
   MachineLearning,
   ComputerVision,
   NaturalLanguageProcessing,
+  ObjectDetection,
 ];
