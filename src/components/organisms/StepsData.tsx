@@ -6,6 +6,8 @@ import MLImage from 'assets/ml-image.png';
 import CVImage from 'assets/computer-vision-image.png';
 import NLPImage from 'assets/natural-lanquage-processing-image.png';
 import ODImage from 'assets/object-detection-image.png';
+import MTImage from 'assets/machine-translation-image.png';
+import SAmage from 'assets/sentiment-analysis-image.png';
 
 const ArtificalInteligence = new Step({
   id: "ArtificalInteligence",
@@ -26,7 +28,9 @@ const ArtificalInteligence = new Step({
     { x: 930, y: 330, rotate: 0, length: 630 },
     { x: 200, y: 290, rotate: -140, length: 480 },
     { x: 190, y: 600, rotate: 120, length: 400 },
-  ]
+  ],
+  previousStep: 'SentimentAnalysis',
+  nextStep: 'MachineLearning',
 })
 
 const MachineLearning = new Step({
@@ -53,7 +57,8 @@ const MachineLearning = new Step({
     </Stack>,
   links: [
     // { x: 650, y: 520, rotate: 90, length: 400 }
-  ]
+  ],
+  previousStep: 'ArtificalInteligence',
 });
 
 const ComputerVision = new Step({
@@ -80,7 +85,8 @@ const ComputerVision = new Step({
     </Stack>,
   links: [
     { x: 360, y: 190, rotate: -160, length: 680 },
-  ]
+  ],
+  nextStep: 'ObjectDetection',
 });
 
 const NaturalLanguageProcessing = new Step({
@@ -103,8 +109,11 @@ const NaturalLanguageProcessing = new Step({
       </Stack>
     </Stack>,
   links: [
-    // { x: 650, y: 520, rotate: 90, length: 400 }
-  ]
+    { x: 150, y: 200, rotate: -160, length: 600 },
+    { x: 150, y: 240, rotate: 150, length: 700 },
+  ],
+  previousStep: 'ObjectDetection',
+  nextStep: 'MachineTranslation',
 });
 
 const ObjectDetection = new Step({
@@ -124,10 +133,55 @@ const ObjectDetection = new Step({
         <Image width={0} height={0} src={ODImage} alt="" style={{ width: '100%', height: 'auto' }} />
       </Box>
     </Stack>,
-  links: [
-    // { x: 650, y: 520, rotate: 90, length: 400 }
-  ]
+  links: [],
+  previousStep: 'ComputerVision',
+  nextStep: 'NaturalLanguageProcessing',
 });
+
+const MachineTranslation = new Step({
+  parent: NaturalLanguageProcessing,
+  id: "MachineTranslation",
+  x: -3660,
+  y: -740,
+  scale: 0.66,
+  children:
+    <Stack alignItems={'end'} justifyContent={'center'} width={'100%'} height={'100%'}>
+      <Typography variant="h2" gutterBottom>{'ترجمه ماشینی'}</Typography>
+      <Typography variant="h5" gutterBottom>{'Machine Translation'}</Typography>
+      <Typography width={600}>
+        ترجمه‌ی ماشینی به فرایند ترجمه‌ی یک متن به کمک نرم‌افزار گفته می‌شود. این فرایند در گذشته بر اساس قواعد دست‌نوشته  انجام می‌شد و دقت پایینی داشت. سپس روش‌های آماری رونق گرفتند که با یادگیری از متن‌هایی در هر دو زبان مبدا و مقصد، یک ترجمه‌ی احتمالی برای عبارت ورودی تولید می‌کردند. در سال‌های اخیر روش‌های مبتنی بر شبکه‌های عصبی، به دلیل توانایی بهتر در یادگیری الگوهای پیچیده و ترجمه‌های بهتر، از همه‌ی روش‌ها پیشی گرفته‌اند.
+      </Typography>
+      <Box width={600} alignSelf={'start'}>
+        <Image width={0} height={0} src={MTImage} alt="" style={{ width: '100%', height: 'auto' }} />
+      </Box>
+    </Stack>,
+  links: [],
+  previousStep: 'NaturalLanguageProcessing',
+  nextStep: 'SentimentAnalysis'
+});
+
+const SentimentAnalysis = new Step({
+  parent: NaturalLanguageProcessing,
+  id: "SentimentAnalysis",
+  x: -3660,
+  y: 940,
+  scale: 0.66,
+  children:
+    <Stack alignItems={'end'} justifyContent={'center'} width={'100%'} height={'100%'}>
+      <Typography variant="h2" gutterBottom>{'تحلیل احساسات'}</Typography>
+      <Typography variant="h5" gutterBottom>{'Sentiment Analysis'}</Typography>
+      <Typography width={600}>
+        تحلیل احساسات یک شاخه‌ی پرکاربرد در حوزه‌ی پردازش زبان طبیعی است که هدف آن تشخیص احساسات موجود در متن و بیان آن‌ها در قالب مقادیر عددی است. از مهم‌ترین کاربردهای این شاخه، تحلیل بازخورد مشتری‌ها در کسب‌وکارهای آنلاین است؛ برای مثال در دیجی‌کالا روزانه هزاران نظر مختلف برای کالاهای گوناگون ثبت می‌شود که بررسی تک‌تک آن‌ها کار زمان‌بری است. به کمک تحلیل احساسات، به طور خودکار نظرات مفید از  غیر مفید جدا می‌شوند و فرآیند بررسی،  سرعت بالایی پیدا می‌کند.
+      </Typography>
+      <Box width={700} alignSelf={'start'}>
+        <Image width={0} height={0} src={SAmage} alt="" style={{ width: '100%', height: 'auto' }} />
+      </Box>
+    </Stack>,
+  links: [],
+  previousStep: 'NaturalLanguageProcessing',
+  nextStep: 'ArtificalInteligence'
+});
+
 
 export default [
   ArtificalInteligence,
@@ -135,4 +189,6 @@ export default [
   ComputerVision,
   NaturalLanguageProcessing,
   ObjectDetection,
+  MachineTranslation,
+  SentimentAnalysis,
 ];
