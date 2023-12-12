@@ -15,7 +15,7 @@ const IframDialog: FC<IframDialogPropsType> = ({
   return (
     <Dialog fullWidth maxWidth='lg' open={open} onClose={handleClose}
       PaperProps={{ sx: { overflow: 'hidden' } }}>
-      <iframe src={src} width={'100%'} height={700} style={{ border: 0 }} />
+      <iframe allow="camera;microphone" src={src} width={'100%'} height={700} style={{ border: 0 }} />
     </Dialog>
   )
 }
