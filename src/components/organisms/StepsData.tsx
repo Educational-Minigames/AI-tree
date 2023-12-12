@@ -201,7 +201,7 @@ const SentimentAnalysis = new Step({
     </Stack>,
   links: [],
   previousStep: 'NaturalLanguageProcessing',
-  nextStep: 'ArtificalInteligence'
+  nextStep: 'OverallView'
 });
 
 const SupervisedLearning = new Step({
