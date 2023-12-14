@@ -39,12 +39,20 @@ function Home() {
       <script type="text/javascript" src="/js/impress.js" />
       <Button
         onClick={() => impress.prev()}
-        size="large" variant='contained' sx={{ color: '#F5EFD9', position: 'fixed', bottom: 30, left: 30, fontSize: 30, width: 180 }}>
+        size="large" variant='contained' sx={{
+          boxShadow: '3px 4px 4.159999847412109px 0px #00000059',
+          backgroundColor: '#0F3C6C', color: '#F5EFD9', fontSize: 30,
+          position: 'fixed', bottom: 30, left: 30, width: 180,
+        }}>
         {'بازگشت'}
       </Button>
       <Button
-        onClick={() => impress.next()}
-        size="large" variant='contained' sx={{ color: '#F5EFD9', position: 'fixed', bottom: 30, right: 30, fontSize: 30, width: 180 }}>
+        onClick={() => impress.next()} 
+        size="large" variant='contained' sx={{
+          boxShadow: '3px 4px 4.159999847412109px 0px #00000059',
+          backgroundColor: '#0F3C6C', color: '#F5EFD9', fontSize: 30,
+          position: 'fixed', bottom: 30, right: 30, width: 180,
+        }}>
         {'ادامه'}
       </Button>
     </Fragment >
