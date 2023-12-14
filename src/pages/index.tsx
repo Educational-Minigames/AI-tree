@@ -3,7 +3,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import steps from 'components/organisms/StepsData';
 import { Box, Button, Dialog, Stack, Typography, Backdrop, IconButton } from "@mui/material";
 import HomeIcon from '@mui/icons-material/Home';
-import BackgroundImage from 'assets/backqround-gradiant.png';
+import BackgroundImage from 'assets/background-gradiant3.jpg';
 
 function Home() {
   const [impress, setImpress] = useState<any>();
