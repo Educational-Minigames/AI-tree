@@ -40,7 +40,7 @@ function Home() {
       <Button
         onClick={() => impress.prev()}
         size="large" variant='contained' sx={{
-          boxShadow: '3px 4px 4.159999847412109px 0px #00000059',
+          boxShadow: '-3px 4px 4.159999847412109px 0px #00000059',
           backgroundColor: '#0F3C6C', color: '#F5EFD9', fontSize: 30,
           position: 'fixed', bottom: 30, left: 30, width: 180,
         }}>
