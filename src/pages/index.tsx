@@ -17,8 +17,6 @@ function Home() {
     }
   }, [])
 
-  console.log(BackgroundImage.src)
-
   return (
     <Fragment>
       <Dialog
