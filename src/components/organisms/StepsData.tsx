@@ -42,7 +42,7 @@ const ArtificalInteligence = new Step({
       </Stack>
     </Stack>,
   links: [
-    { x: 930, y: 330, rotate: 0, length: 630 },
+    { x: 930, y: 330, rotate: 0, length: 700 },
     { x: 200, y: 290, rotate: -140, length: 480 },
     { x: 190, y: 600, rotate: 120, length: 400 },
   ],
