@@ -3,6 +3,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import steps from 'components/organisms/StepsData';
 import { Box, Button, Dialog, Stack, Typography, Backdrop, IconButton } from "@mui/material";
 import HomeIcon from '@mui/icons-material/Home';
+import BackgroundImage from 'assets/backqround-gradiant.png';
 
 function Home() {
   const [impress, setImpress] = useState<any>();
@@ -15,6 +16,8 @@ function Home() {
       setImpress(impress);
     }
   }, [])
+
+  console.log(BackgroundImage.src)
 
   return (
     <Fragment>
@@ -56,6 +59,17 @@ function Home() {
         </Stack>
       </Dialog>
       <div id="impress" data-transition-duration="1000">
+        <Box
+          position={'fixed'}
+          left={-15000}
+          top={-10000}
+          zIndex={-5}
+          height={20000}
+          width={30000}
+          sx={{
+            background: `url(${BackgroundImage.src}) center / cover`,
+          }}
+        />
         {steps.map(step => {
           const stepData = step.getStepData();
           return <Step key={stepData.id} {...stepData} />
