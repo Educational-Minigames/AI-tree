@@ -2,20 +2,20 @@ import { Box, Stack, Typography } from "@mui/material";
 import { Step } from "components/classes/Step";
 import Image from "next/image";
 import PlayGameButton from "components/molecules/PlayGameButton";
-import MLImage from 'assets/ml-image.png';
-import CVImage from 'assets/computer-vision-image.png';
-import NLPImage from 'assets/natural-lanquage-processing-image.png';
-import ODImage from 'assets/object-detection-image.png';
-import MTImage from 'assets/machine-translation-image.png';
-import SAImage from 'assets/sentiment-analysis-image.png';
-import NNImage from 'assets/neural-network-image.png';
-import SLImage from 'assets/supervised-learning-image.png';
-import ClassificationImage from 'assets/classification-image.png';
-import RSImage from 'assets/recommendation-system-image.png';
-import ULImage from 'assets/unsupervised-learning-image.png';
-import ClusteringImage from 'assets/clustering-image.png';
-import RLImage from 'assets/reinforcement-learning-image.png';
-import CNNImage from 'assets/convolutional-neural-network.png';
+import MLImage from 'assets/ml-image.svg';
+import CVImage from 'assets/computer-vision-image.svg';
+import NLPImage from 'assets/natural-lanquage-processing-image.svg';
+import ODImage from 'assets/object-detection-image.svg';
+import MTImage from 'assets/machine-translation-image.svg';
+import SAImage from 'assets/sentiment-analysis-image.svg';
+import NNImage from 'assets/neural-network-image.svg';
+import SLImage from 'assets/supervised-learning-image.svg';
+import ClassificationImage from 'assets/classification-image.svg';
+import RSImage from 'assets/recommendation-system-image.svg';
+import ULImage from 'assets/unsupervised-learning-image.svg';
+import ClusteringImage from 'assets/clustering-image.svg';
+import RLImage from 'assets/reinforcement-learning-image.svg';
+import CNNImage from 'assets/convolutional-neural-network.svg';
 
 const OverallView = new Step({
   id: "OverallView",
