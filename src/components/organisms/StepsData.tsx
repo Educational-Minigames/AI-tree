@@ -247,7 +247,7 @@ const Classification = new Step({
           <Image width={0} height={0} src={ClassificationImage} alt="" style={{ width: '100%', height: 'auto' }} />
         </Box>
         <Box mr={-6}>
-          <PlayGameButton gameLink={'https://teachable-machine.darkube.app/'} />
+          <PlayGameButton gameLink={'https://scientific-minigames.github.io/teachable-machine/'} />
         </Box>
       </Stack>
     </Stack>,
