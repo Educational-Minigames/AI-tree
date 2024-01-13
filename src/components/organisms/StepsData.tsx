@@ -100,7 +100,7 @@ const ComputerVision = new Step({
       <Stack mt={4} width={700} direction={'row'} alignItems={'center'} justifyContent={'space-between'}>
         <Image width={0} height={0} src={CVImage} style={{ width: 600, height: 'auto' }} alt="" />
         <Box mr={-20}>
-          <PlayGameButton gameLink={'https://quick-draw.darkube.app/'} />
+          <PlayGameButton gameLink={'https://scientific-minigames.github.io/quick-draw/'} />
         </Box>
       </Stack>
     </Stack>,
