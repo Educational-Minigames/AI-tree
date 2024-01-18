@@ -6,14 +6,22 @@ import HomeIcon from '@mui/icons-material/Home';
 import BackgroundImage from 'assets/background-gradiant3.jpg';
 
 function Home() {
-  const [impress, setImpress] = useState<any>();
+  const [impress, setImpress] = useState<any>(null);
   const [openInitialDialog, setOpenInitialDialog] = useState(true);
+
+  const onClickHomeButton = (impress: any) => {
+    impress.goto('OverallView', 1000);
+    setOpenInitialDialog(true);
+  }
 
   useEffect(() => {
     const impress = (window as any).impress();
     if (impress) {
       impress.init();
       setImpress(impress);
+      setInterval(() => {
+        onClickHomeButton(impress);
+      }, 5 * 60 * 1000);
     }
   }, [])
 
@@ -75,7 +83,7 @@ function Home() {
       </div>
       <script type="text/javascript" src="/js/impress.js" />
       <Box display={openInitialDialog ? 'none' : 'inherit'}>
-        <IconButton disableRipple size="large" onClick={() => impress.goto('OverallView', 1000)}>
+        <IconButton disableRipple size="large" onClick={() => onClickHomeButton(impress)}>
           <HomeIcon sx={{ fontSize: 50 }} />
         </IconButton>
         <Button
