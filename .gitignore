@@ -4,4 +4,5 @@ yarn-error.log*
 
 postcss.config.js
 
+.DS_store
 .next/
