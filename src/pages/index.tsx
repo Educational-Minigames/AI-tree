@@ -86,7 +86,7 @@ function Home() {
       <script type="text/javascript" src={`${basePath}/js/impress.js`} />
       <Box display={openInitialDialog ? 'none' : 'inherit'}>
         <IconButton disableRipple size="large" onClick={() => onClickHomeButton(impress)}>
-          <HomeIcon sx={{ fontSize: 50 }} />
+          <HomeIcon sx={{ fontSize: 100 }} />
         </IconButton>
         <Button
           onClick={() => impress.prev()}
