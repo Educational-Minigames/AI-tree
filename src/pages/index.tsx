@@ -64,7 +64,7 @@ function Home() {
           </Stack>
         </Stack>
       </Dialog>
-      <div id="impress" data-transition-duration="1000">
+      <div id="impress" data-transition-duration="1500">
         <Box
           position={'fixed'}
           left={-15000}
