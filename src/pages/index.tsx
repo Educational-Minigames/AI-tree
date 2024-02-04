@@ -5,6 +5,8 @@ import { Box, Button, Dialog, Stack, Typography, Backdrop, IconButton } from "@m
 import HomeIcon from '@mui/icons-material/Home';
 import BackgroundImage from 'assets/background-gradiant3.jpg';
 
+const basePath = process.env.NODE_ENV === 'development' ? '' : '/AI-tree';
+
 function Home() {
   const [impress, setImpress] = useState<any>(null);
   const [openInitialDialog, setOpenInitialDialog] = useState(true);
@@ -15,7 +17,7 @@ function Home() {
       impress.init();
       setImpress(impress);
       setInterval(() => {
-        window.location.href = '/';
+        window.location.href = basePath;
       }, 5 * 60 * 1000);
     }
   }, [])
@@ -81,7 +83,7 @@ function Home() {
           return <Step key={stepData.id} {...stepData} />
         })}
       </div>
-      <script type="text/javascript" src={process.env.NODE_ENV === 'development' ? "/js/impress.js" : "/AI-tree/js/impress.js"} />
+      <script type="text/javascript" src={`${basePath}/js/impress.js`} />
       <Box display={openInitialDialog ? 'none' : 'inherit'}>
         <IconButton disableRipple size="large" onClick={() => onClickHomeButton(impress)}>
           <HomeIcon sx={{ fontSize: 50 }} />
