@@ -24,6 +24,10 @@ const ThemeRTL = createTheme({
       fontFamily: "'Anjoman', 'IRANYekan', 'Lalezar'",
       fontWeight: 800,
       direction: 'rtl',
+    },
+    body1: {
+      fontWeight: 400,
+      fontSize: 18,
     }
   },
   palette: {

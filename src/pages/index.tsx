@@ -18,7 +18,7 @@ function Home() {
       setImpress(impress);
       setInterval(() => {
         window.location.href = basePath;
-      }, 5 * 60 * 1000);
+      }, 10 * 60 * 1000);
     }
   }, [])
 
